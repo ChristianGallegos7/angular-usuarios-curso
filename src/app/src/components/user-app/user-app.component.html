@@ -1,4 +1,27 @@
-<div>
-    <user-table [users]="users" />
-    <user-form (newUserEventEmitter)="addUser($event)" />
+<h1>Listado de usuarios</h1>
+<div class="container">
+    <user-form (newUserEventEmitter)="addUser($event)" class="form-container"></user-form>
+    <user-table [users]="users" class="table-container" (idUserEventEmitter)="onRemoveUser($event)"></user-table>
 </div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .form-container {
+        flex: 1;
+        max-width: 40%;
+        /* Ajusta el ancho según sea necesario */
+        margin-right: 20px;
+        /* Espacio entre el formulario y la tabla */
+    }
+
+    .table-container {
+        flex: 2;
+        max-width: 60%;
+        /* Ajusta el ancho según sea necesario */
+    }
+</style>
