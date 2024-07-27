@@ -1,7 +1,11 @@
 <h1>Listado de usuarios</h1>
 <div class="container">
-    <user-form (newUserEventEmitter)="addUser($event)" class="form-container"></user-form>
-    <user-table [users]="users" class="table-container" (idUserEventEmitter)="onRemoveUser($event)"></user-table>
+    <button (click)="setOpen()">Crear Usuario</button>
+    @if (open) {
+        <user-form (newUserEventEmitter)="addUser($event)" class="form-container" [user]="userSelected"></user-form>
+    }
+    <user-table [users]="users" class="table-container" (idUserEventEmitter)="onRemoveUser($event)"
+        (selectedUserEventEmitter)="selectedUser($event)"></user-table>
 </div>
 
 <style>

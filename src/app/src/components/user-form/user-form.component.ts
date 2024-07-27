@@ -1,5 +1,5 @@
 import { User } from './../../interfaces/user.interface';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class UserFormComponent {
 
-  user: User;
+  @Input() user: User;
 
   @Output() newUserEventEmitter = new EventEmitter<User>();
 

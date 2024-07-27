@@ -23,11 +23,17 @@ export class UserTableComponent {
 
   @Input() users: User[] = [];
 
-  displayedColumns: string[] = ['id', 'name', 'lastName', 'userName', 'email', 'password', 'remove'];
+  displayedColumns: string[] = ['id', 'name', 'lastName', 'userName', 'email', 'password', 'remove', 'edit'];
 
   @Output() idUserEventEmitter = new EventEmitter();
 
   onRemoveUser(id: number): void {
     this.idUserEventEmitter.emit(id);
+  }
+
+  @Output() selectedUserEventEmitter = new EventEmitter();
+
+  onEditUser(user: User): void {
+    this.selectedUserEventEmitter.emit(user);
   }
 }
