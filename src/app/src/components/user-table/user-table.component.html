@@ -1,9 +1,11 @@
+
+<button mat-raised-button color="primary" routerLink="/users/create" class="crear-btn">Crear Usuario</button>
+
 @if(users.length === 0){
 <div>
     No hay registros en el sistema
 </div>
-}
-@if(users.length > 0){
+}@else{
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="users" class="mat-elevation-z8">
 

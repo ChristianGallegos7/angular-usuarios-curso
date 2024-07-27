@@ -1,18 +1,22 @@
 
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../interfaces/user.interface';
-import { UserService } from '../../services/user.service'
-import { UserTableComponent } from '../user-table/user-table.component';
-import { UserFormComponent } from '../user-form/user-form.component';
+import { User } from '../interfaces/user.interface';
+import { UserService } from '../services/user.service'
+import { UserTableComponent } from './user-table/user-table.component';
+import { UserFormComponent } from './user-form/user-form.component';
 import Swal from 'sweetalert2';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @Component({
   selector: 'user-app',
   standalone: true,
   imports: [
+    RouterOutlet,
     UserTableComponent,
-    UserFormComponent
+    UserFormComponent,
+    NavbarComponent
   ],
   templateUrl: './user-app.component.html',
 })

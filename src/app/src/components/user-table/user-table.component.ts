@@ -5,6 +5,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 
 import { User } from '../../interfaces/user.interface';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -14,12 +15,14 @@ import { User } from '../../interfaces/user.interface';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   templateUrl: './user-table.component.html',
   styleUrls: ['./user-table.component.scss']
 })
 export class UserTableComponent {
+
 
   @Input() users: User[] = [];
 
