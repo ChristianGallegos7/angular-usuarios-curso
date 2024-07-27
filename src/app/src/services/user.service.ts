@@ -19,7 +19,7 @@ export class UserService {
     {
       id: 2,
       name: 'Jane',
-      lastName: 'Doe',
+      lastName: 'Jane',
       email: 'jane@example.com',
       password: 'XXXXXXXXXXX',
       userName: 'XXXXXXX'
