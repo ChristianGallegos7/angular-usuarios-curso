@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { User } from '../../interfaces/user.interface';
 @Component({
   selector: 'navbar',
   standalone: true,
@@ -13,5 +14,5 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  @Input() users: User[] = [];
 }

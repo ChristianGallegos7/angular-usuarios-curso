@@ -20,10 +20,15 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   templateUrl: './user-app.component.html',
 })
+
 export class UserAppComponent implements OnInit {
+
   users: User[] = [];
+
   userSelected: User;
+
   open: boolean = false;
+  
   constructor(private service: UserService) {
     this.userSelected = new User();
   }

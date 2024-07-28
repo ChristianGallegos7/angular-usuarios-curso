@@ -1,8 +1,6 @@
 <mat-toolbar color="primary">
-    <span>My Application</span>
-    <span class="spacer"></span>
-    <a mat-button routerLink="/">Home</a>
-    <a mat-button routerLink="/users">Usuarios</a>
-    <a mat-button routerLink="/users/create">Crear Usuario</a>
-  </mat-toolbar>
-  
+  <span>Usuarios Itsco</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/users" [state]={users}>Lista de Usuarios</a>
+  <a mat-button routerLink="/users/create">Crear Usuario</a>
+</mat-toolbar>
